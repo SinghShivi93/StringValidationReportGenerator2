@@ -56,3 +56,24 @@ print(f"Total valid names: {len(validnames)}")
 print(f"Total invalid names: {len(invalidnames)}")
 print(f"Total valid email IDs: {len(validemailids)}")
 print(f"Total invalid email IDs: {len(invalidemailids)}")
+
+#====== Phone number validation=====
+phone_number=input("Enter phone numbers (comma separated): ").split(",") 
+validphonenumbers = []
+invalidphonenumbers = [] 
+for i in range(len(phone_number)):
+  phone_number[i]=phone_number[i].strip()
+  if phone_number[i].isdigit() and len(phone_number[i])==10:
+    validphonenumbers.append(phone_number[i])
+  else:
+    invalidphonenumbers.append(phone_number[i])
+if not validphonenumbers:
+  print("No valid number")
+else:
+  print(f"Valid numbers are : {', '.join (validphonenumbers)}")
+if not invalidphonenumbers:
+  print("No invalid numbers")
+else:
+  print(f"Invalid numbers are: {', '.join(invalidphonenumbers)}")
+
+
