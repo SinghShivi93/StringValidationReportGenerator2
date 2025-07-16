@@ -1,0 +1,19 @@
+name=input("Enter the names , comma separated: ").split(",") 
+validnames=[]
+invalidnames=[] 
+for i in range(len(name)):
+  name[i]=name[i].strip()
+  if name[i].replace(" ","").isalpha():
+    name[i]=name[i].title()
+    validnames.append(name[i])
+  else:
+    invalidnames.append(name[i])
+if validnames==[]:
+  print("No valid names")
+else:
+  print(f"Valid names are : {', '.join (validnames)}")
+if invalidnames==[]:
+  print("No invalid names")
+else:
+  print(f"Invalid names are :{', '.join(invalidnames)}")
+
